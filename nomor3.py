@@ -1,9 +1,9 @@
-""" Nama program : nomor3.py
-    Nama         : 
-    NPM          : 
+""" Nama program : nomo3.py
+    Nama         : Mohammad Faris Arie Prasetyo, Muhammad Ikhsan Fadhilah, Mohammad Zidan Yohanza, Rifqi Muhadzib Ahdan
+    NPM          : 140810190056, 140810210003, 140810210021, 140810210029
     Tanggal buat : 18 September 2022
     Deskripsi    : Gaji Pegawai
-"""
+******************************************************"""
 
 # Fungsi Input String 
 def inputString() :
@@ -58,5 +58,6 @@ def outputData(name, gol, gapok, tunjangan, potongan, gatot) :
 # main program 
 name = inputString()
 gol = inputInteger()
-print("\n")
+
+print()
 gajiTotal(name, gol)
