@@ -10,6 +10,7 @@ def inputString() :
     word = input("Masukkan Nama Anda : ")
     return word
 
+# Fungsi Status bilangan 
 def status(bil) :
     if (bil >= 1 and bil <= 4) :
         return 0
