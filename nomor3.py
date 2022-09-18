@@ -5,7 +5,7 @@
     Deskripsi    : Gaji Pegawai
 ******************************************************"""
 
-# Fungsi Input String 
+# Fungsi Input Nama
 def inputString() :
     word = input("Masukkan Nama Anda : ")
     return word

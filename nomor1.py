@@ -5,7 +5,7 @@
     Deskripsi    : Huruf Mutu
 ******************************************************"""
     
-# Fungsi Memasukkan Kata   
+# Fungsi Memasukkan String  
 def inputString(message) :
     print(message, end="")
     word = input()
