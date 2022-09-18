@@ -10,49 +10,91 @@ def inputString() :
     word = input("Masukkan Nama Anda : ")
     return word
 
+def status(bil) :
+    if (bil >= 1 and bil <= 4) :
+        return 0
+    else :
+        return 1  
+
 # Fungsi Input Integer
 def inputInteger() :
-    value = int(input("Masukkan Golongan : "))
+    stat = 1
+    while(stat) :
+        value = int(input("Masukkan Golongan 1-4 : "))
+        stat = status(value)
     return value
 
-# Fungsi Operasi Gaji Total
-def gajiTotal(name, gol) :
+# Fungsi Operasi Gaji Pokok
+def gajiPokok(gol) :
     match gol :
         case 1 :
             gapok = 1500000
-            potongan = gapok*(1*0.01)
-            tunjangan = gapok*(10*0.01)
         
         case 2 :
             gapok = 2000000
-            potongan = gapok*(2*0.01)
-            tunjangan = gapok*(12*0.01)
             
         case 3 :
             gapok = 3000000
-            potongan = gapok*(2*0.01)
-            tunjangan = gapok*(12*0.01)
             
         case 4 :
             gapok = 5000000
-            potongan = gapok*(4*0.01)
-            tunjangan = gapok*(15*0.01)
-    
-    gatot = gapok + tunjangan - potongan
-    outputData(name, gol, gapok, tunjangan, potongan, gatot)
+    return gapok
+
+# Fungsi Operasi Potongan
+def potonganGaji(gol) :
+    match gol :
+        case 1 :
+            potongan = 0.01
+        
+        case 2 :
+            potongan = 0.02
+            
+        case 3 :
+            potongan = 0.02
+            
+        case 4 :
+            potongan = 0.04
+    return (potongan * gajiPokok(gol))
+
+# Fungsi Operasi Tunjangan 
+def tunjanganGaji(gol) :
+    match gol :
+        case 1 :
+            tunjangan = 0.01
+        
+        case 2 :
+            tunjangan = 0.12
+            
+        case 3 :
+            tunjangan = 0.12
+            
+        case 4 :
+            tunjangan = 0.15
+    return (tunjangan * gajiPokok(gol))
+
+# Fungsi Operasi Gaji Total
+def gajTot(gapok, potongan, tunjangan) :
+    return (gapok + tunjangan - potongan)
 
 # Fungsi Output         
 def outputData(name, gol, gapok, tunjangan, potongan, gatot) :
-    print("Nama Pegawai : " , name)
-    print("Golongan     : " , gol)
-    print("Gaji Pokok   : " , gapok)
-    print("Tunjangan    : " , round(tunjangan))
-    print("Potongan     : " , round(potongan))
-    print("Gaji Total   : " , round(gatot))
+    print("~~~~~~~OUTPUT DATA~~~~~~~")
+    print("Nama Pegawai :" , name)
+    print("Golongan     :" , gol)
+    print("Gaji Pokok   : Rp" , gapok)
+    print("Tunjangan    : Rp" , round(tunjangan))
+    print("Potongan     : Rp" , round(potongan))
+    print("Gaji Total   : Rp" , round(gatot))
+    print()
    
 # main program 
+print("~~~~~~~INPUT DATA~~~~~~~")
 name = inputString()
 gol = inputInteger()
+gajpok = gajiPokok(gol)
+potongan = potonganGaji(gol)
+tunjangan = tunjanganGaji(gol)
+gatot = gajTot(gajpok, potongan, tunjangan)
 
 print()
-gajiTotal(name, gol)
+outputData(name, gol, gajpok, tunjangan, potongan, gatot)
