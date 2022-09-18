@@ -7,14 +7,12 @@
     
 # Fungsi Memasukkan String  
 def inputString(message) :
-    print(message, end="")
-    word = input()
+    word = input(message)
     return word
     
 # Fungsi Memasukkan angka float   
 def inputFloat(message) :
-    print(message, end="")
-    value = float(input())
+    value = float(input(message))
     return value
     
 # Fungsi Menentukan Huruf Mutu   
