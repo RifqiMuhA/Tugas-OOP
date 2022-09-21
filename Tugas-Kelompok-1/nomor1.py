@@ -1,4 +1,4 @@
-""" Nama program : nomo1.py
+""" Nama program : nomor1.py
     Nama         : Mohammad Faris Arie Prasetyo, Muhammad Ikhsan Fadhilah, Mohammad Zidan Yohanza, Rifqi Muhadzib Ahdan
     NPM          : 140810190056, 140810210003, 140810210021, 140810210029
     Tanggal buat : 18 September 2022
@@ -47,8 +47,8 @@ def outputMutu(mutu, mean, status, name, npm) :
     print("Keterangan : " , status)
     
 # main program
-name = inputString("Masukkan Nama  : ")
-npm = inputString("Masukkan NPM   : ")
+name = inputString("Masukkan Nama          : ")
+npm  = inputString("Masukkan NPM           : ")
 Skor1 = inputFloat("Masukkan Nilai Pertama : ")
 Skor2 = inputFloat("Masukkan Nilai Kedua   : ")
 Skor3 = inputFloat("Masukkan Nilai Ketiga  : ")

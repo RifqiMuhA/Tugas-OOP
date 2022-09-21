@@ -1,4 +1,4 @@
-""" Nama program : nomo3.py
+""" Nama program : nomor3.py
     Nama         : Mohammad Faris Arie Prasetyo, Muhammad Ikhsan Fadhilah, Mohammad Zidan Yohanza, Rifqi Muhadzib Ahdan
     NPM          : 140810190056, 140810210003, 140810210021, 140810210029
     Tanggal buat : 18 September 2022
@@ -15,6 +15,7 @@ def status(bil) :
     if (bil >= 1 and bil <= 4) :
         return 0
     else :
+        print("Input gol sesuai range")
         return 1  
 
 # Fungsi Input Integer
