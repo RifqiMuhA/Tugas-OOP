@@ -66,7 +66,7 @@ def whileLoopPola(baris):
 
         printSpasi(baris*3, i)
 
-        print(str(i) + ".", end='')
+        print(str(i) + "." , end='')
         whileLoopDescending(baris, i)
 
         print('')

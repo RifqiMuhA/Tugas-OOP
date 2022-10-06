@@ -20,7 +20,7 @@ def status(bil) :
 
 # Fungsi Input Integer
 def inputInteger() :
-    stat = 1
+    stat = 10
     while(stat) :
         value = int(input("Masukkan Golongan 1-4 : "))
         stat = status(value)
